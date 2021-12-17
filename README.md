@@ -25,5 +25,5 @@ guild = client.get_guild(PASTE HERE)
 4. Under "Token", (just to be safe), hit "Regenerate" and "Copy" this token
 5. Insert this token in line 41
 
-'''guild = client.get_guild(ENTER SERVER ID HERE)'''
+````guild = client.get_guild(ENTER SERVER ID HERE)````
 
