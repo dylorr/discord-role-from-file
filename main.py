@@ -28,7 +28,7 @@ async def on_ready():
     
 
     #loop through list of names
-    for x in prewhitelist_list:
+    for x in file_tolist:
         try: 
             user = discord.utils.get(guild.members, name= x[:-5], discriminator= x[-4:]) #separate username from discriminator
             #add role to user, print success
