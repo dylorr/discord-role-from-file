@@ -17,16 +17,14 @@ client=discord.Client(intents=intents)
 @client.event
 async def on_ready():
     #print('We have logged in as {0.user}'.format(client))
-    guild = client.get_guild(enter server id here)
-    role = discord.utils.get(guild.roles,name="enter role name here")
+    guild = client.get_guild(ENTER SERVER ID HERE)
+    role = discord.utils.get(guild.roles,name="ENTER ROLE NAME HERE") #Role name must be exact match
 
     #example of importing a csv, creating list from column of discord names, filtering out wrong names
-    file= pd.read_csv('prewhitelist.csv')
+    file= pd.read_csv('filename.csv')
     file_tolist = prewhitelist_file['col'].tolist()
-    #filter our usernames w/o discriminator (#1234, etc.)
-    file_tolist = [x for x in prewhitelist_list if '#' in x]
-    #filter out usernames that start w/ a weird character
-    file_tolist = [x.lstrip("!*@$") for x in prewhitelist_list]
+    #filter our usernames w/o discriminator (#1234, etc.), filter out usernames that start w/ a weird character
+    file_tolist = [x.lstrip("!*@$") for x in file_tolist if '#' in x]
     
 
     #loop through list of names
@@ -35,9 +33,9 @@ async def on_ready():
             user = discord.utils.get(guild.members, name= x[:-5], discriminator= x[-4:]) #separate username from discriminator
             #add role to user, print success
             await user.add_roles(role)
-            print(f'Succesfully added {role} to {user}')
+            print(f'✅ Succesfully added {role} to {user}')
             time.sleep(3)
         except AttributeError: 
-            print(f'{x} was unable to be added to the role')
+            print(f'❌ {role} was unable to be added to the {x}')
 
-client.run('TOKEN')
+client.run('PASTE TOKEN HERE')
