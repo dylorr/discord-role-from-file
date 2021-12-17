@@ -1,7 +1,7 @@
 ## Role Discord Members (by username) from File
 
 
-#Bot Setup
+# Bot Setup
 1. Navigate to https://discord.com/developers/applications 
 2. Create a new application
 3. Navigate to the "Bot" tab
@@ -12,10 +12,10 @@
 8. Copy & Paste the generated URL at the bottom & select designated server - this is inviting the bot to the server
 
 
-#Bot Setup in Server
+# Bot Setup in Server
 1. Ensure you place your bot in a role within your server that is **higher** than the role you intend to assign to your list of users - meaning the bot's highest role should allow for the bot to assign and edit roles of other users. This is important!
 
-#Using this file
+# Using this file
 1. To get the server ID - aka guild id as referred to in the file - make sure you have Developer Mode turned on in Discord (Settings-->Advanced-->Developer Mode)
 2. Find the designated server icon in the left side panel, right click and select 'Copy ID' from the tool tip. This should be inserted in line 22 
 
