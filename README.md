@@ -17,13 +17,9 @@
 
 ### Using this file
 1. To get the server ID - aka guild id as referred to in the file - make sure you have Developer Mode turned on in Discord (Settings-->Advanced-->Developer Mode)
-2. Find the designated server icon in the left side panel, right click and select 'Copy ID' from the tool tip. This should be inserted in line 20 
-
-guild = client.get_guild(PASTE HERE)
+2. Find the designated server icon in the left side panel, right click and select 'Copy ID' from the tool tip. This should be inserted in line 20: ````guild = client.get_guild(ENTER SERVER ID HERE)````
 
 3. In order to connect the Bot you created in the first set of instructions - go back to https://discord.com/developers/applications, select your application and navigate to the "Bot" tab again
 4. Under "Token", (just to be safe), hit "Regenerate" and "Copy" this token
-5. Insert this token in line 41
-
-````guild = client.get_guild(ENTER SERVER ID HERE)````
+5. Insert this token in line 41: ````client.run('PASTE TOKEN HERE')````
 
