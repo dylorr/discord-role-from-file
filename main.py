@@ -22,7 +22,7 @@ async def on_ready():
 
     #example of importing a csv, creating list from column of discord names, filtering out wrong names
     file= pd.read_csv('filename.csv')
-    file_tolist = prewhitelist_file['col'].tolist()
+    file_tolist = file['col'].tolist()
     #filter our usernames w/o discriminator (#1234, etc.), filter out usernames that start w/ a weird character
     file_tolist = [x.lstrip("!*@$") for x in file_tolist if '#' in x]
     
